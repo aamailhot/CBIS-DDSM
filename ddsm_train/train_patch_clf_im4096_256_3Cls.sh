@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PYTHONPATH="$PYTHONPATH;D:\git_repos\yuyuCbisDdsm"
+
 TRAIN_DIR="Combined_patches_im4096_256_v3/train"
 VAL_DIR="Combined_patches_im4096_256_v3/val"
 TEST_DIR="Combined_patches_im4096_256_v3/test"
@@ -10,7 +12,9 @@ FINAL_MODEL="NOSAVE"
 
 export NUM_CPU_CORES=3
 
-python patch_clf_train.py \
+echo "SHELL TEST"
+
+python "D:\git_repos\yuyuCbisDdsm\ddsm_train\patch_clf_train.py" \
 	--img-size 256 256 \
     --img-scale 255.0 \
 	--featurewise-center \
@@ -36,7 +40,6 @@ python patch_clf_train.py \
     --max-pooling-stride 2 \
     --weight-decay 0.01 \
     --weight-decay2 0.0001 \
-    --bias-multiplier 0.1 \
     --alpha 0.0001 \
     --l1-ratio 0.0 \
     --inp-dropout 0.0 \

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "HI THERE!"
+
 TRAIN_DIR="INbreast/train_dat_mod/train"
 VAL_DIR="INbreast/train_dat_mod/test"
 TEST_DIR="INbreast/train_dat_mod/val"
@@ -11,6 +13,9 @@ FINAL_MODEL="NOSAVE"
 export NUM_CPU_CORES=4
 
 # 255/65535 = 0.003891.
+
+echo "HI AGAIN"
+
 python image_clf_train.py \
 	--no-patch-model-state \
 	--resume-from $RESUME_FROM \

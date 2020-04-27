@@ -1,0 +1,8 @@
+1) Get and install Python 3.6.8 (and set it as default on your PATH):
+  https://www.python.org/downloads/release/python-368/
+
+2) Update pip and setuptools (probably not needed but good to b safe):
+   > pip3 install --upgrade pip setuptools
+
+3) Install needed packages (note specific versions in places):
+   > pip install opencv-python numpy keras=2.3.1 tensorflow dicom sklearn
